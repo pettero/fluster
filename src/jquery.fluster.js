@@ -59,9 +59,7 @@
 						$target.bind(evnt, fluster_update);
 					}else if(evnt.substr(0, 10) == "_intervall"){
 						var delay = evnt.substr(11, evnt.length);
-						// $.log("timeout", delay);
 						// Automaticly trigger the timeout after delay seconds 
-						// $.log("$(\"" + $target.selector + "\").trigger(\"" + evnt + "\");");
 						setTimeout("$(\"" + $target.selector + "\").trigger(\"" + evnt + "\");" , delay);
 						$target.data("e_" + evnt, pattern.selectors[sel][evnt]);
 						$target.bind(evnt, fluster_update);
