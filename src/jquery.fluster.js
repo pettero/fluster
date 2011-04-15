@@ -40,7 +40,7 @@
 		// $.log(pattern.mustache, data);
 		// Merge the response with the templates
 		if( typeof(pattern.mustache) != "undefined" ){
-			var dom = $( $.mustache( pattern.mustache, data, pattern.partials ) );
+			var dom = $( Mustache.to_html( pattern.mustache, data, pattern.partials ) );
 			// Replace the context element with the new dom
 			$(element).html( dom );
 			// Apply the selectors on the result

@@ -1,0 +1,38 @@
+ERROR:root:no resource file, exiting
+DEBUG:root:parsing is starting
+DEBUG:root:Looking in path fluster
+DEBUG:root:content is ['my_event']
+DEBUG:root:folder: fluster/my_event
+DEBUG:root:Looking in path fluster/my_event
+DEBUG:root:content is ['data.js', 'mustache.html', 'query.js']
+DEBUG:root:opening fluster/my_event/data.js
+DEBUG:root:file_content: function(data){
+	var resp = {
+		items : []
+	};
+	$.each(data.items, function(i,item){
+		resp.items[i] = {
+			"selected" : window.selected_item == item,
+			"value" : item
+		};; 
+	});
+	return resp;
+}
+DEBUG:root:file name: data
+DEBUG:root:closing file fluster/my_event/data.js
+DEBUG:root:opening fluster/my_event/mustache.html
+DEBUG:root:file_content: <ul>{{#items}}<li {{#selected}}class="seletcted"{{/selected}}>{{value}}</li>{{/items}}</ul>
+DEBUG:root:file name: mustache
+DEBUG:root:closing file fluster/my_event/mustache.html
+DEBUG:root:opening fluster/my_event/query.js
+DEBUG:root:file_content: function(element){
+	return {
+		"url" : "json/demo_1.json"
+	};
+}
+DEBUG:root:file name: query
+DEBUG:root:closing file fluster/my_event/query.js
+DEBUG:root:Opening file fluster for writing
+DEBUG:root:Written data to fluster
+DEBUG:root:Closing file fluster
+DEBUG:root:Start moving files to their correct place

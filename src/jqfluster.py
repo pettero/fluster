@@ -81,6 +81,7 @@ def rc():
 		msg = "no resource file, exiting"
 		logging.error(msg)
 		#print msg
+		return
 		sys.exit(1)
 	f = open(".jqscrbldrc", "r")
 	logging.debug("resource file opened")
@@ -140,7 +141,7 @@ def main(argv):
 	logging.debug("Closing file %s" % file_name)
 	
 	logging.debug("Start moving files to their correct place")
-	if "deploy" in settings["default"]:
+	if settings and "deploy" in settings["default"]:
 		if os.path.isdir(settings["default"]["deploy"]):
 			logging.debug("removing the previous directory")
 			shutil.rmtree(settings["default"]["deploy"])
