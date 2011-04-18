@@ -1,0 +1,1 @@
+﻿var fluster = {"injected": {"mustache": "<div>Here is some content.And listeners are added on this link as <a href=\"\">well :)</a></div>", "selectors": {"a": {"click": "function(event){\n\talert(\"Clink is clicked\");\n\tevent.preventDefault();\n}"}}}};
