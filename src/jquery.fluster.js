@@ -66,7 +66,7 @@
 					}else{
 						// $.log("registering " + evnt + " on ", $target);
 						$target.data("e_" + evnt, pattern.selectors[sel][evnt]);
-						$target.bind(evnt, function(event){
+						$target.bind(evnt, { parent : element }, function(event){
 							// $.log("Executing event", event, "on", event.currentTarget);
 							funFromStr($(event.currentTarget).data("e_"+event.type))(event);
 						});

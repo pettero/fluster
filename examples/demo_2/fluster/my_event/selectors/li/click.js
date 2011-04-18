@@ -1,3 +1,3 @@
 function(event){
-	alert(this);
+	alert(event.currentTarget.nodeName + " was clicked");
 }

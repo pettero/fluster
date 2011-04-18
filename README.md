@@ -106,8 +106,12 @@ The generated is used in html like this
 	</head>
 
 * See a demo [Here!][demo_1]
-* See a demo with click listeners registered afterwords [here][demo_2]
-* See a 3 step wizzard [here][demo_3]
+* See a demo with click listeners registered afterwards [here][demo_2]
+* See a 3 step wizard that uses the global scope [here][demo_3_alt]
+* See a 3 step wizard [here][demo_3]
+* See a demo with JavaScript injections [here][demo_4]
+* See a demo with 
+
 
 ## Where to use it
 When you want a page to update several parts regardless of each other. 
@@ -115,26 +119,12 @@ When you want a page to update several parts regardless of each other.
 When the response you get back from the server is in JSON and you start concatenate strings in order to 
 merge the result with the JSON.
 
-## When not to use it
-When you want the users to jump between static pages.
-
-Google raking do not work on pages that are loaded with JavaScript
-
-## Cool side effects
-It is easier to do function tests....
-Automatically name spaced functions
-
 [couchapp]: http://couchapp.org/page/index "CouchApp" 
 [evently]: https://github.com/jchris/evently "Evently"
 [mustache]: https://github.com/janl/mustache.js/ "Mustache JS"
 [jquery-ajax]: http://api.jquery.com/jQuery.ajax/ "jQuery Ajax"
 [demo_1]: http://fluster.se/demo_1/index.html "Demo 1"
 [demo_2]: http://fluster.se/demo_2/index.html "Demo 2"
-[demo_3]: http://fluster.se/demo_3/index.html "Demo 3 - The wizzard"
-In it's most simple form the steps are as follows
-
-1. Make a query
-2. Process the result
-3. Render the result
-
-The format is created 
+[demo_3_alt]: http://fluster.se/demo_3/index.html "Demo 3 - The wizard using the global scope"
+[demo_3]: http://fluster.se/demo_3/index.html "Demo 3 - The wizard"
+[demo_4]: http://fluster.se/demo_4/index.html "Demo 4 - Injections"
